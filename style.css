@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #0b1020, #16213e);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: bold;
+    color: #facc15;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    margin-left: 25px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f97316;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px 60px;
+    isolation: isolate;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(5, 10, 30, 0.45), rgba(8, 18, 44, 0.55)),
+        url('/static/images/NewIPL.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(1px);
+    transform: scale(1.01);
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 1;
+}
+
+.navbar,
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #dbeafe;
+    margin-bottom: 35px;
+}
+
+/* Buttons */
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #f97316, #ef4444);
+    color: white;
+}
+
+.btn-secondary {
+    background: linear-gradient(90deg, #2563eb, #7c3aed);
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 60px 40px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255,255,255,0.13);
+}
+
+.feature-card h2 {
+    color: #facc15;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.feature-card p {
+    color: #e5e7eb;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* Deliveries / Matches Pages */
+.simple-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: linear-gradient(90deg, #1d4ed8, #7c3aed);
+}
+
+.page-title {
+    text-align: center;
+    padding: 35px 20px 20px;
+}
+
+.page-title h1 {
+    font-size: 42px;
+    color: #facc15;
+    margin-bottom: 10px;
+}
+
+.page-title p {
+    font-size: 18px;
+    color: #cbd5e1;
+}
+
+.table-container {
+    width: 95%;
+    margin: 20px auto 40px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    overflow-x: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.dataframe {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    background: transparent;
+    font-size: 14px;
+}
+
+.dataframe th,
+.dataframe td {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 12px;
+    text-align: center;
+}
+
+.dataframe th {
+    background: rgba(250, 204, 21, 0.15);
+    color: #facc15;
+    font-weight: bold;
+}
+
+.dataframe tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.dataframe tr:hover {
+    background: rgba(255, 255, 255, 0.10);
+}
