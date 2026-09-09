@@ -53,9 +53,6 @@ pip install -r requirements.txt
 ```
 4. Visit `http://localhost:5000` in your browser
 
-## Live Demo
-[Add your live link here once deployed]
-
 ## Author
 **Himanshi**  
 [LinkedIn](https://linkedin.com/in/himanshi001) | [GitHub](https://github.com/Himanshidhiman)
